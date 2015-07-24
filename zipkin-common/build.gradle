@@ -1,4 +1,5 @@
 dependencies {
 	compile util('core'), zk('client'), algebird('core'), ostrich,
-			finagle('ostrich4', 'thrift', 'zipkin', 'exception')
+			finagle('ostrich4', 'thrift', 'zipkin', 'exception'),
+			testDependencies  // For FunSuiteWithJUnit. Ugly to have here, along with the class. Please improve.
 }

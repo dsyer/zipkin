@@ -21,12 +21,12 @@ import com.twitter.cassie.{Column, ColumnFamily, Order}
 import com.twitter.util.Future
 import org.mockito.Matchers._
 import org.mockito.Mockito.{times, verify, when}
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 import org.scalatest.mock.MockitoSugar
 
 import scala.collection.JavaConverters._
 
-class BucketedColumnFamilyTest extends FunSuite with MockitoSugar {
+class BucketedColumnFamilyTest extends FunSuiteWithJUnit with MockitoSugar {
   val numBuckets = 10
 
   val key = "some_key"

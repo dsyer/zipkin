@@ -21,9 +21,9 @@ import java.nio.ByteBuffer
 
 import com.twitter.util.Await
 import com.twitter.zipkin.common._
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class AnormIndexTest extends FunSuite {
+class AnormIndexTest extends FunSuiteWithJUnit {
 
   /*
    * We should be able to switch out the database type and have all the tests

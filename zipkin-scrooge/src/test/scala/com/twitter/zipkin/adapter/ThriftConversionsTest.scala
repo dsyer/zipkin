@@ -23,9 +23,9 @@ import com.twitter.zipkin.common._
 import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.query._
 import com.twitter.zipkin.thriftscala
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class ThriftConversionsTest extends FunSuite {
+class ThriftConversionsTest extends FunSuiteWithJUnit {
   test("convert Annotation") {
     val expectedAnn: Annotation = Annotation(123, "value", Some(Endpoint(123, 123, "service")))
     assert(expectedAnn.toThrift.toAnnotation === expectedAnn)

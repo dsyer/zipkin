@@ -5,12 +5,13 @@ import com.twitter.ostrich.admin.CustomHttpHandler
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.Matchers
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
 /**
  * Test endpoints for getting and setting configurations for sample rate and storage request rate
  */
-class ConfigRequestHandlerSpec extends FunSuite with Matchers with MockitoSugar {
+class ConfigRequestHandlerSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
 
   val sampleRateConfig = mock[AdjustableRateConfig]
   val exchange = mock[HttpExchange]

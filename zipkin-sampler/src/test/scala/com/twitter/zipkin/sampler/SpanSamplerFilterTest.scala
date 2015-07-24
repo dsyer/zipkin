@@ -18,9 +18,9 @@ package com.twitter.zipkin.sampler
 import com.twitter.finagle.Service
 import com.twitter.util.{Await, Future}
 import com.twitter.zipkin.common._
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class SpanSamplerFilterTest extends FunSuite {
+class SpanSamplerFilterTest extends FunSuiteWithJUnit {
   test("filters spans based on their traceId") {
     val spans = Seq(
       Span(0, "svc", 123L, None, List.empty[Annotation], Seq.empty[BinaryAnnotation]),

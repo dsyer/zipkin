@@ -17,9 +17,9 @@
 package com.twitter.zipkin.common
 
 import com.twitter.conversions.time._
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class AnnotationTest extends FunSuite {
+class AnnotationTest extends FunSuiteWithJUnit {
   test("get min of two annotations") {
     val ann1 = Annotation(1, "one", None)
     val ann2 = Annotation(2, "two", None)

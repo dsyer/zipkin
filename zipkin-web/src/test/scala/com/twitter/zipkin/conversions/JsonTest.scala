@@ -4,9 +4,9 @@ import java.nio.ByteBuffer
 
 import com.twitter.zipkin.common.json._
 import com.twitter.zipkin.common.{AnnotationType, BinaryAnnotation}
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class JsonTest extends FunSuite {
+class JsonTest extends FunSuiteWithJUnit {
   val key = "key"
   test("bool") {
     val trueAnnotation = BinaryAnnotation(key, ByteBuffer.wrap(Array[Byte](1)), AnnotationType.Bool, None)

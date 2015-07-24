@@ -21,9 +21,9 @@ import java.nio.ByteBuffer
 import com.twitter.finagle.http.Request
 import com.twitter.util.Time
 import com.twitter.zipkin.common.{AnnotationType, BinaryAnnotation}
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class QueryExtractorTest extends FunSuite {
+class QueryExtractorTest extends FunSuiteWithJUnit {
 
   val queryExtractor = new QueryExtractor(10)
 

@@ -19,9 +19,9 @@ package com.twitter.zipkin.storage.anormdb
 
 import anorm.SqlParser._
 import anorm._
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class AnormDBTest extends FunSuite {
+class AnormDBTest extends FunSuiteWithJUnit {
   test("have the correct schema") {
     implicit val con = new DB(new DBConfig("sqlite-memory", new DBParams(dbName = "zipkinTest"))).install()
     val expectedTables = List("zipkin_annotations", "zipkin_binary_annotations", "zipkin_spans", "zipkin_dependencies", "zipkin_dependency_links")

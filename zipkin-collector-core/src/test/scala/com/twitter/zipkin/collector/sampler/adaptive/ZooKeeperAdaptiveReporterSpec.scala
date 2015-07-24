@@ -26,9 +26,10 @@ import org.apache.zookeeper.data.Stat
 import org.apache.zookeeper.{CreateMode, ZooKeeper}
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.Matchers
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class ZooKeeperAdaptiveReporterSpec extends FunSuite with Matchers with MockitoSugar {
+class ZooKeeperAdaptiveReporterSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
 
   val samplerTimer = mock[Timer]
 

@@ -18,9 +18,9 @@ package com.twitter.zipkin.sampler
 import java.util.Random
 
 import com.twitter.util.Var
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class SamplerTest extends FunSuite {
+class SamplerTest extends FunSuiteWithJUnit {
   val rnd = new Random(1L)
 
   test("is permissive when the rate is 1") {

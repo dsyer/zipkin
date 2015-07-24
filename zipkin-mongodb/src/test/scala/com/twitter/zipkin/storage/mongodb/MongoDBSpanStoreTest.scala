@@ -8,9 +8,9 @@ import com.twitter.util.TimeConversions._
 import com.twitter.zipkin.mongodb.MongoDBSpanStoreFactory
 import com.twitter.zipkin.storage.util.SpanStoreValidator
 import com.twitter.zipkin.storage.{IndexedTraceId, SpanStore}
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class MongoDBSpanStoreTest extends FunSuite {
+class MongoDBSpanStoreTest extends FunSuiteWithJUnit {
 
   test("timestamps in MongoDBSpanStoreUtils") {
     val mockUtils = new MongoDBSpanStoreUtils {

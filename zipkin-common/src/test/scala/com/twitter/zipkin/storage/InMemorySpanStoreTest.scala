@@ -16,9 +16,9 @@
 package com.twitter.zipkin.storage
 
 import com.twitter.zipkin.storage.util.SpanStoreValidator
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class InMemorySpanStoreTest extends FunSuite {
+class InMemorySpanStoreTest extends FunSuiteWithJUnit {
   def newSpanStore = new InMemorySpanStore
   test("validate") { new SpanStoreValidator(newSpanStore).validate }
 }

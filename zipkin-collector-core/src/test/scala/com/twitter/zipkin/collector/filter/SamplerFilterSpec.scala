@@ -22,9 +22,10 @@ import com.twitter.zipkin.collector.sampler.{EverythingGlobalSampler, NullGlobal
 import com.twitter.zipkin.common.Span
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.Matchers
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class SamplerFilterSpec extends FunSuite with Matchers with MockitoSugar {
+class SamplerFilterSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
   val service = mock[Service[Span, Unit]]
 
   test("let the span pass if debug flag is set") {

@@ -27,11 +27,12 @@ import com.twitter.zipkin.common._
 import org.mockito.Matchers._
 import org.mockito.Mockito.{atLeastOnce, times, verify, when}
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.{BeforeAndAfter, FunSuite}
+import org.scalatest.BeforeAndAfter
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
 import scala.collection.JavaConverters._
 
-class CassandraIndexTest extends FunSuite with BeforeAndAfter with MockitoSugar {
+class CassandraIndexTest extends FunSuiteWithJUnit with BeforeAndAfter with MockitoSugar {
   object FakeServer extends FakeCassandra
 
   val mockKeyspace = mock[Keyspace]

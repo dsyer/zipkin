@@ -17,9 +17,9 @@
 package com.twitter.zipkin.web
 
 import com.twitter.conversions.time._
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class UtilTest extends FunSuite {
+class UtilTest extends FunSuiteWithJUnit {
   import Util._
 
   test("durationStr") {

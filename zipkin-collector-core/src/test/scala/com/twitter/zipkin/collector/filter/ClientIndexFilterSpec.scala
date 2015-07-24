@@ -18,9 +18,10 @@ package com.twitter.zipkin.collector.filter
 
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
 import com.twitter.zipkin.thriftscala
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.Matchers
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class ClientIndexFilterSpec extends FunSuite with Matchers {
+class ClientIndexFilterSpec extends FunSuiteWithJUnit with Matchers {
 
   val filter = new ClientIndexFilter
 

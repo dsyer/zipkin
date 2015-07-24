@@ -20,9 +20,10 @@ import com.twitter.ostrich.admin.RuntimeEnvironment
 import com.twitter.util.Eval
 import com.twitter.zipkin.builder.Builder
 import com.twitter.zipkin.query.ZipkinQuery
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.Matchers
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class ConfigSpec extends FunSuite with Matchers {
+class ConfigSpec extends FunSuiteWithJUnit with Matchers {
 
   val eval = new Eval
 

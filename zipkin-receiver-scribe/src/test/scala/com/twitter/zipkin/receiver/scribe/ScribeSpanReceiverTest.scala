@@ -20,9 +20,9 @@ import com.twitter.util.{Await, Future}
 import com.twitter.zipkin.common._
 import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.thriftscala.{LogEntry, ResultCode, Span => ThriftSpan}
-import org.scalatest.FunSuite
+import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-class ScribeSpanReceiverTest extends FunSuite {
+class ScribeSpanReceiverTest extends FunSuiteWithJUnit {
   val serializer = new BinaryThriftStructSerializer[ThriftSpan] {
     def codec = ThriftSpan
   }
