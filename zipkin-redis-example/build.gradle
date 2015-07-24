@@ -1,0 +1,13 @@
+// SBT migration notes:
+//  - using gradle-onejar plugin for PackageDist; the `build` task now generates a fat jar
+//  - TODO BuildProperties is not ported at all
+apply from: '../gradle-onejar.plugin'
+ext {
+	mainClass = 'com.twitter.zipkin.example.Main'
+}
+
+dependencies {
+	compile twitterServer,
+			finagle('zipkin', 'stats'),
+			zipkin('web', 'redis', 'query', 'receiver-scribe', 'zookeeper')
+}
