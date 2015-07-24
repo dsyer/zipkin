@@ -5,8 +5,6 @@ dependencies {
 			zipkin('common', 'scrooge')
 
 	runtime slf4jLog4j12
-
-	testCompile testDependencies, scalaTestDeps
 }
 
 test.maxParallelForks = 1

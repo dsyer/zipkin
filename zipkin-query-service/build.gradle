@@ -8,8 +8,6 @@ ext {
 
 dependencies {
 	compile zipkin('query-core', 'cassandra', 'redis', 'anormdb', 'hbase', 'mongodb')
-
-	testCompile testDependencies
 }
 
 sourceSets.test.resources {

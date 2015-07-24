@@ -10,8 +10,6 @@ dependencies {
 	compile zipkin(
 			'collector-core', 'collector-scribe', 'receiver-kafka',
 			'cassandra', 'kafka', 'redis', 'anormdb', 'hbase', 'mongodb')
-
-	testCompile testDependencies
 }
 
 sourceSets.test.resources {

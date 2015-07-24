@@ -2,6 +2,4 @@ dependencies {
 	compile finagle("thriftmux", "zipkin"),
 			util("app", "core"),
 			zipkin('common', 'scrooge')
-
-	testCompile scalaTestDeps
 }

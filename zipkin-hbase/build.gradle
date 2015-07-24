@@ -12,7 +12,6 @@ dependencies {
 			'com.google.guava:guava-io:r03', //Hadoop needs a deprecated class
 			hbaseTest('common', 'client', 'server', 'hadoop-compat', 'hadoop2-compat'),
 			hadoopTest('mapreduce-client-jobclient', 'common', 'hdfs'),
-			testDependencies, scalaTestDeps
 
 	runtime('org.apache.zookeeper:zookeeper:3.4.6') { transitive = false }
 	runtime slf4jLog4j12

@@ -16,8 +16,6 @@ dependencies {
 			finagle('ostrich4', 'thrift', 'zipkin'),
 			scrooge('core', 'serializer'),
 			zipkin('common')
-
-	testCompile scalaTestDeps
 }
 
 thriftSrcDir = "${project(':zipkin-thrift').projectDir}/src/main/thrift/com/twitter/zipkin"

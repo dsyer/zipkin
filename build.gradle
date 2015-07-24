@@ -33,21 +33,6 @@ subprojects {
         slf4jLog4j12 = "org.slf4j:slf4j-log4j12:1.6.4"  // Dont forget to use for configuration 'runtime' only
         ostrich = "com.twitter:ostrich_${scalaInterfaceVersion}:9.9.0"
         griddle = 'com.yodle.griddle:griddle:1.7'
-
-        scalaTestDeps = [
-                "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5",
-                junit
-        ]
-
-        testDependencies = [
-                junit,
-                "org.scala-tools.testing:specs_${scalaInterfaceVersion}:1.6.9",
-                "org.jmock:jmock:2.4.0",
-                // jmock tests mock classes and require additional dependencies.
-                "cglib:cglib:2.2.2",
-                "asm:asm:1.5.3",
-                "org.objenesis:objenesis:1.1"
-        ]
     }
 
     //////////////////////////
@@ -74,6 +59,10 @@ subprojects {
                 'org.apache.zookeeper:zookeeper:3.4.6', // internal twitter + kafka + curator
                 'org.slf4j:slf4j-api:1.6.4' // libthrift 0.5 otherwise pins 1.5.x
                 // EOF dependencyOverrides
+
+        testCompile junit,
+                'org.mockito:mockito-all:1.10.19',
+                "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5"
     }
     // SBT migration note: end of zipkinSettings
 }

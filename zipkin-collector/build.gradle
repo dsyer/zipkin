@@ -3,6 +3,4 @@ dependencies {
 			util('core'),
 			twitterServer,
 			zipkin('common', 'scrooge')
-
-	testCompile scalaTestDeps
 }

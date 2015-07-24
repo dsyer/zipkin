@@ -5,8 +5,7 @@ dependencies {
 			scrooge("serializer"),
 			zipkin('common', 'collector', 'zookeeper', 'scrooge')
 
-	testCompile 'com.github.charithe:kafka-junit:1.4',
-			scalaTestDeps
+	testCompile 'com.github.charithe:kafka-junit:1.4'
 }
 
 // SBT migration note: this was in the SBT build, but tests pass without it.

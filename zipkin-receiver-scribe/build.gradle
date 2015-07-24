@@ -4,6 +4,4 @@ dependencies {
 			zipkin('collector', 'zookeeper', 'scrooge')
 
 	runtime slf4jLog4j12
-
-	testCompile scalaTestDeps
 }

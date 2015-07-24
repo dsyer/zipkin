@@ -2,6 +2,4 @@ dependencies {
 	compile "com.twitter:tormenta-kafka_${scalaInterfaceVersion}:0.10.0",
 			scrooge('serializer'),
 			zipkin('collector-core', 'scrooge')
-
-	testCompile testDependencies
 }

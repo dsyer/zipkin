@@ -13,6 +13,4 @@ dependencies {
 			"com.zaxxer:HikariCP-java6:2.3.8",
 			anormDriverDependencies[dbEngine],
 			zipkin('common', 'scrooge')
-
-	testCompile testDependencies, scalaTestDeps
 }

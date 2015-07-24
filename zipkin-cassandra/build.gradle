@@ -7,7 +7,4 @@ dependencies {
 			hadoop('client'),
 			util('logging', 'app'),
 			zipkin('scrooge')
-
-	testCompile 'org.mockito:mockito-all:1.10.9',
-			testDependencies, scalaTestDeps
 }

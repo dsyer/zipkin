@@ -1,6 +1,4 @@
 dependencies {
 	compile scrooge('serializer'),
 			zipkin('collector-core', 'scrooge')
-
-	testCompile testDependencies
 }
