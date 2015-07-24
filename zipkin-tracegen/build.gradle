@@ -1,0 +1,3 @@
+dependencies {
+	compile zipkin('query-service', 'collector-service')
+}

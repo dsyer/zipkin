@@ -1,0 +1,7 @@
+dependencies {
+	compile finagle('core', 'http'),
+			util('core', 'zk'),
+			zipkin('common', 'zookeeper')
+
+	testCompile scalaTestDeps
+}
