@@ -19,9 +19,9 @@ package com.twitter.zipkin.common
 import java.nio.ByteBuffer
 
 import com.twitter.zipkin.Constants
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class SpanTest extends FunSuiteWithJUnit {
+class SpanTest extends FunSuite {
 
   val annotationValue = "NONSENSE"
   val expectedAnnotation = Annotation(1, annotationValue, Some(Endpoint(1, 2, "service")))

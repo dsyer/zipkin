@@ -17,12 +17,11 @@
 package com.twitter.zipkin.storage.redis
 
 import com.twitter.zipkin.common.Span
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
 import scala.util.Random
 
-class RedisConversionsSpec extends FunSuiteWithJUnit with Matchers {
+class RedisConversionsSpec extends FunSuite with Matchers {
   val rand = new Random
 
   test("convert from a TraceLog and back") {

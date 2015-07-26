@@ -22,10 +22,9 @@ import org.apache.zookeeper.WatchedEvent
 import org.mockito.Matchers.any
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class ZooKeeperAdjustableRateConfigSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class ZooKeeperAdjustableRateConfigSpec extends FunSuite with Matchers with MockitoSugar {
 
   val KeySampleRate = "samplerate"
 

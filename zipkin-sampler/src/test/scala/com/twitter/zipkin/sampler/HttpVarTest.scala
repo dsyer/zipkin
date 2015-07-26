@@ -18,9 +18,9 @@ package com.twitter.zipkin.sampler
 import com.twitter.finagle.http.{HttpMuxer, RequestBuilder, Response}
 import com.twitter.util.Await
 import org.jboss.netty.buffer.ChannelBuffers.wrappedBuffer
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class HttpVarTest extends FunSuiteWithJUnit {
+class HttpVarTest extends FunSuite {
   test("can request the current value") {
     val httpVar = new HttpVar("test1", 1.0)
     val req = RequestBuilder().url("http://localhost/vars/test1").buildGet

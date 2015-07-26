@@ -23,10 +23,9 @@ import com.twitter.util.Await
 import com.twitter.zipkin.cassandra.{Keyspace, StorageBuilder}
 import com.twitter.zipkin.common._
 import com.twitter.zipkin.query.Trace
-import org.scalatest.BeforeAndAfter
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{BeforeAndAfter, FunSuite}
 
-class CassandraStorageTest extends FunSuiteWithJUnit with BeforeAndAfter {
+class CassandraStorageTest extends FunSuite with BeforeAndAfter {
   object FakeServer extends FakeCassandra
 
   var cassandraStorage: CassandraStorage = null

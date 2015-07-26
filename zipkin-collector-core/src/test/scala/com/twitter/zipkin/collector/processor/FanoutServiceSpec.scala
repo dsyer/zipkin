@@ -20,10 +20,9 @@ import com.twitter.finagle.Service
 import com.twitter.util.Future
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class FanoutServiceSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class FanoutServiceSpec extends FunSuite with Matchers with MockitoSugar {
   test("fanout") {
     val serv1 = mock[Service[Int, Unit]]
     val serv2 = mock[Service[Int, Unit]]

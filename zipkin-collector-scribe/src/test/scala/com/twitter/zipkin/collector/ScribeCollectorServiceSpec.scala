@@ -28,10 +28,9 @@ import com.twitter.zipkin.thriftscala
 import org.mockito.Matchers._
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.{Matchers, OneInstancePerTest}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers, OneInstancePerTest}
 
-class ScribeCollectorServiceSpec extends FunSuiteWithJUnit with OneInstancePerTest with Matchers with MockitoSugar {
+class ScribeCollectorServiceSpec extends FunSuite with OneInstancePerTest with Matchers with MockitoSugar {
   val serializer = new BinaryThriftStructSerializer[thriftscala.Span] {
     def codec = thriftscala.Span
   }

@@ -18,11 +18,11 @@ package com.twitter.zipkin.storage.cassandra
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
 import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.thriftscala
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
 import scala.collection.mutable.ArrayBuffer
 
-class SnappyCodecTest extends FunSuiteWithJUnit {
+class SnappyCodecTest extends FunSuite {
 
   val thriftCodec = new ScroogeThriftCodec[thriftscala.Span](thriftscala.Span)
   val snappyCodec = new SnappyCodec(thriftCodec)

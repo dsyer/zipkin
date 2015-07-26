@@ -23,9 +23,9 @@ import com.twitter.zipkin.common._
 import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.storage.InMemorySpanStore
 import com.twitter.zipkin.thriftscala
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class ThriftQueryServiceTest extends FunSuiteWithJUnit {
+class ThriftQueryServiceTest extends FunSuite {
   val ep1 = Endpoint(123, 123, "service1")
   val ep2 = Endpoint(234, 234, "service2")
   val ep3 = Endpoint(345, 345, "service3")

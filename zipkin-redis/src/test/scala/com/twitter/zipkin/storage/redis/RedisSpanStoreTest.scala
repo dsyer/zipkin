@@ -18,9 +18,9 @@ package com.twitter.zipkin.storage.redis
 import com.twitter.app.App
 import com.twitter.util.Await
 import com.twitter.zipkin.redis.RedisSpanStoreFactory
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class RedisSpanStoreTest extends FunSuiteWithJUnit {
+class RedisSpanStoreTest extends FunSuite {
 
   object RedisStore extends App with RedisSpanStoreFactory
   RedisStore.main(Array(

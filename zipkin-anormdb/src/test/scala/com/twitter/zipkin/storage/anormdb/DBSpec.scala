@@ -20,10 +20,9 @@ package com.twitter.zipkin.storage.anormdb
 import java.sql.{Connection, SQLNonTransientException, SQLRecoverableException}
 
 import com.twitter.util.Await
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class DBSpec extends FunSuiteWithJUnit with Matchers {
+class DBSpec extends FunSuite with Matchers {
 
   test("retry if SQLRecoverableException is thrown") {
     val db = new DB(new DBConfig("sqlite-memory", new DBParams(dbName = "zipkinTest")))

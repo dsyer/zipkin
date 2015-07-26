@@ -23,10 +23,9 @@ import com.twitter.util.Future
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class WriteQueueWorkerSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class WriteQueueWorkerSpec extends FunSuite with Matchers with MockitoSugar {
 
   test("hand off to processor") {
     val service = mock[Service[Span, Unit]]

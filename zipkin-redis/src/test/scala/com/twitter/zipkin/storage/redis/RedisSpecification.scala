@@ -19,9 +19,8 @@ package com.twitter.zipkin.storage.redis
 import com.twitter.finagle.redis.Client
 import com.twitter.finagle.redis.util.RedisCluster
 import org.scalatest._
-import com.twitter.zipkin.test.FunSuiteWithJUnit
 
-trait RedisSpecification extends FunSuiteWithJUnit with Matchers with BeforeAndAfter with BeforeAndAfterAll {
+trait RedisSpecification extends FunSuite with Matchers with BeforeAndAfter with BeforeAndAfterAll {
   lazy val _client = Client("127.0.0.1:6379")
 
   override def beforeAll(configMap: ConfigMap) {

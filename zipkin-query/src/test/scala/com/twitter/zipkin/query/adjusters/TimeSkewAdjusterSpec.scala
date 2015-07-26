@@ -19,11 +19,11 @@ package com.twitter.zipkin.query.adjusters
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
 import com.twitter.zipkin.query.Trace
 import com.twitter.zipkin.thriftscala
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
 import scala.collection._
 
-class TimeSkewAdjusterTest extends FunSuiteWithJUnit {
+class TimeSkewAdjusterTest extends FunSuite {
   val endpoint1 = Some(Endpoint(123, 123, "service"))
   val endpoint2 = Some(Endpoint(321, 321, "service"))
   val endpoint3 = Some(Endpoint(456, 456, "service"))

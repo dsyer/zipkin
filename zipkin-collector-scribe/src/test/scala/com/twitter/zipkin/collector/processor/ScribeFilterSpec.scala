@@ -23,10 +23,9 @@ import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.thriftscala
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class ScribeFilterSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class ScribeFilterSpec extends FunSuite with Matchers with MockitoSugar {
   val serializer = new BinaryThriftStructSerializer[thriftscala.Span] {
     def codec = thriftscala.Span
   }

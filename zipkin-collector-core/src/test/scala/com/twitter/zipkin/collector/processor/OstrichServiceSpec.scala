@@ -20,10 +20,9 @@ package com.twitter.zipkin.collector.processor
 import com.twitter.ostrich.stats.{Distribution, Histogram, Stats}
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
 import com.twitter.zipkin.thriftscala
-import org.scalatest.{BeforeAndAfter, Matchers}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{BeforeAndAfter, FunSuite, Matchers}
 
-class OstrichServiceSpec extends FunSuiteWithJUnit with Matchers with BeforeAndAfter {
+class OstrichServiceSpec extends FunSuite with Matchers with BeforeAndAfter {
   val histogram = Histogram()
   histogram.add(10)
   val distribution = new Distribution(histogram)

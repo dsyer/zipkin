@@ -22,10 +22,9 @@ import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import com.twitter.zipkin.config.sampler.adaptive.ZooKeeperAdaptiveSamplerConfig
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class PolicyFilterSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class PolicyFilterSpec extends FunSuite with Matchers with MockitoSugar {
 
   val _config = mock[ZooKeeperAdaptiveSamplerConfig]
   val _storageRequestRate = mock[AdjustableRateConfig]

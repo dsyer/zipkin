@@ -46,12 +46,6 @@ subprojects {
         slf4jLog4j12 = "org.slf4j:slf4j-log4j12:1.6.4"  // Dont forget to use for configuration 'runtime' only
         ostrich = "com.twitter:ostrich_${scalaInterfaceVersion}:9.9.0"
         griddle = 'com.yodle.griddle:griddle:1.7'
-
-        testDependencies = [
-                junit,
-                'org.mockito:mockito-all:1.10.19',
-                "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5"
-        ]
     }
 
     //////////////////////////
@@ -81,7 +75,9 @@ subprojects {
 
         runtime "org.scala-lang:scala-library:${scalaVersion}"
 
-        testCompile testDependencies
+        testCompile junit,
+                'org.mockito:mockito-all:1.10.19',
+                "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5"
     }
     // SBT migration note: end of zipkinSettings
 }

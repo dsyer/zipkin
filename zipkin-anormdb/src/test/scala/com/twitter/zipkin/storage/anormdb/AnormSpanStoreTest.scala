@@ -18,9 +18,9 @@ package com.twitter.zipkin.storage.anormdb
 import com.twitter.app.App
 import com.twitter.zipkin.anormdb.AnormDBSpanStoreFactory
 import com.twitter.zipkin.storage.util.SpanStoreValidator
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class AnormSpanStoreTest extends FunSuiteWithJUnit {
+class AnormSpanStoreTest extends FunSuite {
   object AnormStore extends App with AnormDBSpanStoreFactory
   AnormStore.main(Array(
     "-zipkin.storage.anormdb.db", "sqlite::memory:",

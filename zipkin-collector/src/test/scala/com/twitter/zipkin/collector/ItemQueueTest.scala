@@ -18,9 +18,9 @@ package com.twitter.zipkin.collector
 import java.util.concurrent.{CountDownLatch, TimeUnit}
 
 import com.twitter.util.{Await, Future}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class ItemQueueTest extends FunSuiteWithJUnit {
+class ItemQueueTest extends FunSuite {
   val Item = ()
 
   def fill(queue: ItemQueue[Unit, Unit], items: Int): Future[Boolean] = {

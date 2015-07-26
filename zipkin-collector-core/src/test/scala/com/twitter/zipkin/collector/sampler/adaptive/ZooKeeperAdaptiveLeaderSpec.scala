@@ -24,12 +24,11 @@ import com.twitter.zipkin.config.sampler.adaptive.ZooKeeperAdaptiveSamplerConfig
 import org.apache.zookeeper.ZooKeeper
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
 import scala.collection.JavaConverters._
 
-class ZooKeeperAdaptiveLeaderSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class ZooKeeperAdaptiveLeaderSpec extends FunSuite with Matchers with MockitoSugar {
   val samplerTimer = mock[Timer]
 
   val _zk                       = mock[ZooKeeper]

@@ -18,9 +18,9 @@ package com.twitter.zipkin.common
 
 import java.net.InetSocketAddress
 
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class EndpointTest extends FunSuiteWithJUnit {
+class EndpointTest extends FunSuite {
   val google  = Endpoint(  134744072, -80, "google")
   val example = Endpoint(-1073730806,  21, "example")
   val twitter = Endpoint( -952396249, 443, "twitter")

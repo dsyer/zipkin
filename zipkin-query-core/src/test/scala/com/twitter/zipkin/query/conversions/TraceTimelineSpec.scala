@@ -20,10 +20,9 @@ import java.nio.ByteBuffer
 import com.twitter.zipkin.common._
 import com.twitter.zipkin.query.{TimelineAnnotation, Trace, TraceTimeline}
 import com.twitter.zipkin.thriftscala
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class TraceTimelineSpec extends FunSuiteWithJUnit with Matchers {
+class TraceTimelineSpec extends FunSuite with Matchers {
 
 //T = 0	 koalabird-cuckoo	 ValuesFromSource	 Server receive	 10.34.238.111 ():9149
 //T + 1	 client	 multiget_slice	 Client send	 10.34.238.111 ():54147

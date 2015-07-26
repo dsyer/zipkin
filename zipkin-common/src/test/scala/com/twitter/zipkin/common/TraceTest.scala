@@ -20,11 +20,11 @@ import java.nio.ByteBuffer
 
 import com.twitter.zipkin.Constants
 import com.twitter.zipkin.query.{SpanTreeEntry, Timespan, Trace, TraceSummary}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
 import scala.collection.mutable
 
-class TraceTest extends FunSuiteWithJUnit {
+class TraceTest extends FunSuite {
 
   // TODO these don't actually make any sense
   val annotations1 = List(Annotation(100, Constants.ClientSend, Some(Endpoint(123, 123, "service1"))),

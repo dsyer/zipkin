@@ -19,9 +19,9 @@ package com.twitter.zipkin.common
 import com.twitter.algebird.{Moments, Monoid, Semigroup}
 import com.twitter.conversions.time._
 import com.twitter.util.Time
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class DependenciesTest extends FunSuiteWithJUnit {
+class DependenciesTest extends FunSuite {
   test("services compare correctly") {
     val s1 = Service("foo")
     val s2 = Service("bar")

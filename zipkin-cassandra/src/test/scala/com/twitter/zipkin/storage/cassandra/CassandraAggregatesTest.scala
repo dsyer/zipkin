@@ -27,12 +27,11 @@ import com.twitter.zipkin.common.{Dependencies, DependencyLink, Service}
 import com.twitter.zipkin.thriftscala
 import org.mockito.Mockito.when
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.BeforeAndAfter
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{BeforeAndAfter, FunSuite}
 
 import scala.collection.JavaConverters._
 
-class CassandraAggregatesTest extends FunSuiteWithJUnit with MockitoSugar with BeforeAndAfter {
+class CassandraAggregatesTest extends FunSuite with MockitoSugar with BeforeAndAfter {
 
   val mockKeyspace = mock[Keyspace]
   val mockAnnotationsCf = mock[ColumnFamily[String, Long, String]]

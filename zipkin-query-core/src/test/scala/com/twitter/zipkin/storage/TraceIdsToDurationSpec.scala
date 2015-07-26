@@ -18,10 +18,9 @@ package com.twitter.zipkin.storage
 import com.twitter.util.{Await, Future}
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class TraceIdsToDurationSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class TraceIdsToDurationSpec extends FunSuite with Matchers with MockitoSugar {
   test("fetch durations in batches") {
     val index = mock[Index]
     val duration1 = TraceIdDuration(1L, 100L, 500L)

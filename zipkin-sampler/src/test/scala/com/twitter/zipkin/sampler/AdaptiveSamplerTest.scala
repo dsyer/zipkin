@@ -18,9 +18,9 @@ package com.twitter.zipkin.sampler
 import com.twitter.conversions.time._
 import com.twitter.finagle.stats.NullStatsReceiver
 import com.twitter.util.{MockTimer, Time, Var}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class RequestRateCheckTest extends FunSuiteWithJUnit {
+class RequestRateCheckTest extends FunSuite {
   test("fails when the request rate is non-positive") {
     val rate = Var(1)
     val check = new RequestRateCheck[Unit](rate)

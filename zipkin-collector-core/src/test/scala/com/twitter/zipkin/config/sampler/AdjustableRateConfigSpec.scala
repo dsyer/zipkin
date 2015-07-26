@@ -17,10 +17,9 @@ package com.twitter.zipkin.config.sampler
 
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
-import org.scalatest.Matchers
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.{FunSuite, Matchers}
 
-class AdjustableRateConfigSpec extends FunSuiteWithJUnit with Matchers with MockitoSugar {
+class AdjustableRateConfigSpec extends FunSuite with Matchers with MockitoSugar {
 
   val sampleRateConfig = mock[AdjustableRateConfig]
   val sr = 0.3

@@ -20,9 +20,9 @@ import com.twitter.algebird.Moments
 import com.twitter.conversions.time._
 import com.twitter.util.{Await, Time}
 import com.twitter.zipkin.common.{Dependencies, DependencyLink, Service}
-import com.twitter.zipkin.test.FunSuiteWithJUnit
+import org.scalatest.FunSuite
 
-class AnormAggregatesTest extends FunSuiteWithJUnit {
+class AnormAggregatesTest extends FunSuite {
   test("store and get dependencies") {
     val db = new DB(new DBConfig("sqlite-memory", new DBParams(dbName = "zipkinAggregatesTest1")))
     val con = db.install()
