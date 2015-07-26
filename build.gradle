@@ -1,3 +1,19 @@
+task dependencyReport {
+    doLast {
+        def file = new File("project-dependencies.dot")
+        file.delete()
+        file << "digraph {\n"
+        file << "splines=ortho\n"
+        rootProject.childProjects.each { item ->
+            def from = item.value
+            from.configurations.compile.dependencies
+                    .matching { it in ProjectDependency }
+                    .each { to -> file << ("\"${from.name}\" -> \"${to.name}\"\n")}
+        }
+        file << "}\n"
+    }
+}
+
 subprojects {
     apply plugin: 'java'
     apply plugin: 'scala'
@@ -62,6 +78,8 @@ subprojects {
                 'org.apache.zookeeper:zookeeper:3.4.6', // internal twitter + kafka + curator
                 'org.slf4j:slf4j-api:1.6.4' // libthrift 0.5 otherwise pins 1.5.x
                 // EOF dependencyOverrides
+
+        runtime "org.scala-lang:scala-library:${scalaVersion}"
 
         testCompile testDependencies
     }
