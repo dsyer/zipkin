@@ -2,6 +2,8 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'scala'
 
+    apply from: "${rootProject.projectDir}/gradle-scalatest.plugin"
+
     ext {
         ////////////////////////////////
         // Commonly used dependencies //
