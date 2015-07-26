@@ -9,7 +9,7 @@ ext {
 dependencies {
 	compile zipkin(
 			'collector-core', 'collector-scribe', 'receiver-kafka',
-			'cassandra', 'kafka', 'redis', 'anormdb', 'hbase', 'mongodb')
+			'cassandra', 'kafka', 'redis', 'anormdb', 'mongodb')
 }
 
 sourceSets.test.resources {

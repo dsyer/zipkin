@@ -14,9 +14,6 @@ subprojects {
         algebird = mkDepGen { "com.twitter:algebird-${it}_${scalaInterfaceVersion}:0.10.2" }
         zipkin = mkDepGen { project(":zipkin-${it}") }
 
-        hbase = mkDepGen { name -> "org.apache.hbase:hbase${if (name) "-${name}" else ''}:0.98.13-hadoop2" }
-        hbaseTest = { String... names -> hbase(*names) + hbase(*names).collect{"${it}:tests"} }
-
         hadoop = mkDepGen { "org.apache.hadoop:hadoop-${it}:2.4.0" }
         hadoopTest = { String... names -> hadoop(*names) + hadoop(*names).collect{"${it}:tests"} }
 
