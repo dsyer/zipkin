@@ -1,10 +1,5 @@
-// SBT migration notes:
-//  - using gradle-onejar plugin for PackageDist; the `build` task now generates a fat jar
-//  - TODO BuildProperties is not ported at all
-apply from: '../gradle-onejar.plugin'
-ext {
-	mainClass = 'com.twitter.zipkin.query.Main'
-}
+apply plugin: 'application'
+mainClassName = 'com.twitter.zipkin.query.Main'
 
 dependencies {
 	compile zipkin('query-core', 'cassandra', 'redis', 'anormdb', 'mongodb')
