@@ -11,9 +11,11 @@ buildscript {
 
 if (!project.plugins.findPlugin(com.github.maiflai.ScalaTestPlugin)) {
 	project.apply(plugin: com.github.maiflai.ScalaTestPlugin)
-	dependencies {
-		testRuntime 'org.pegdown:pegdown:1.1.0'
-	}
+
+	// Pegdown, a lib required for generating HTML test reports from ScalaTest
+	// pulls in an asm dependency that's incompatible with another version pulled in by production dependencies.
+	// Solution: let's just disable HTML test reports.
+	test.reports.html.enabled = false
 }
 
 
