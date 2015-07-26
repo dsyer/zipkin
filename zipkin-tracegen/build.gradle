@@ -1,3 +1,6 @@
+apply plugin: 'application'
+mainClassName = 'com.twitter.zipkin.tracegen.Main'
+
 dependencies {
 	compile zipkin('query-service', 'collector-service')
 }
